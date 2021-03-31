@@ -7,7 +7,7 @@ e = datetime.datetime.now()
 if(name in allowedUsers):
     password = input('Your password \n')
     userId = allowedUsers.index(name)
-    
+
     if(password == allowedPassword[userId]):
         print(e.strftime('%m/%d/%Y %H:%M'))
         print('Welcome %s' % name) 
@@ -20,16 +20,21 @@ if(name in allowedUsers):
         selectedOption = int(input('Please select an option'))
 
         if(selectedOption == 1):
-            print('you selected %s' %selectedOption)
+            withdrawal = input('How much would you like to withdrawal')
+            print(withdrawal)
+            print("Take your cash")
+            
         elif(selectedOption == 2):
-            print('you selected %s' %selectedOption)
+            deposit = input('How much would you like to deposit?')
+            print(desposit)
 
         elif(selectedOption == 3):
-            print('you selected %s' %selectedOption)
+            complaint = input('What issue would you like to report?')
+            print('Thank you for contacting us.')
         else:
             print('Invalid Option selected, please try again')
     else:
         print('Password Incorrect, please try again')
-
+        
 else:
     print('Name not found, please try again')
